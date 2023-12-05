@@ -1,9 +1,16 @@
-
- 
-
-steps:
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-
-- bash: echo hello world
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: echo hello from Linux
+- job: macOS
+  pool:
+    vmImage: 'macOS-latest'
+  steps:
+  - script: echo hello from macOS
+- job: Windows
+  pool:
+    vmImage: 'windows-latest'
+  steps:
+  - script: echo hello from Windows
