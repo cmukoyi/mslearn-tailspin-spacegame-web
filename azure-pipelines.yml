@@ -1,5 +1,5 @@
 pool:
-  name: MyAgentPool
+  name: default
 
 steps:
 - task: DotNetCoreCLI@2
